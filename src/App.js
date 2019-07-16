@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios';
+import logo from './img/logo-marvel.png';
 import MarvelCard from './components/MarvelCard'
 
 const md5 = require('md5');
@@ -31,10 +32,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="Card">
-        <h1 className="titulo">
-          Marvel Heroes
-        </h1>
+      <div className="card">
+        <div className="card-logo">
+          <img src={logo} alt="Marvel logo"/>
+        </div>
         {this.state.heroes.map((hero) => (
           <MarvelCard
             hero={hero}
